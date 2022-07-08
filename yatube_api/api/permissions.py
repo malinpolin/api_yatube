@@ -1,5 +1,6 @@
 from rest_framework import permissions
 
+
 METHODS_FOR_AUTH_USER = ('GET', 'POST')
 METHODS_FOR_AUTHOR = ('PATCH', 'PUT', 'DELETE')
 
