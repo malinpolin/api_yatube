@@ -24,10 +24,6 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ('id', 'text', 'author', 'image', 'pub_date', 'group')
-        read_only_fields = ('author', 'pub_date')
-
-    def create(self, validated_data):
-        return super().create(validated_data)
 
 
 class GroupSerializer(serializers.ModelSerializer):
@@ -48,4 +44,4 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = ('id', 'author', 'post', 'text', 'created')
-        read_only_fields = ('author', 'created')
+        read_only_fields = ('created', )
